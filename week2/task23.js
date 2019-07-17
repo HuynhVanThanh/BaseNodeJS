@@ -23,13 +23,29 @@ console.log('tong so san pham: ' + products.length);
 const moment = require('moment');
 products.forEach(element => {
     // element.dateUpdated = new Date();
-    element.dateUpdated = moment(element.dateUpdated).fromNow();
+    element.dateUpdated = new Date(element.dateUpdated);
 });
 
 products.forEach(element => {
     console.log(element.id + ' - ' + element.name + ' - ' 
-    + element.price + ' - ' + 'Cập nhật cách đây ' + element.dateUpdated);
+    + element.price + ' - ' + 'Cập nhật cách đây ' + moment(element.dateUpdated).fromNow());
     // 0001 - iPhone X - 30,000,000VND - Cập nhật cách đây 3 ngày
 });
 
-// console.log(products[1]);
+///////////////////////// Task3 ////////////////////////////////////
+
+var format = require('date-fns/format')
+
+products.forEach(element => {
+    element.updated = element.dateUpdated;
+    element.updated = format(new Date(element.updated), 'MM/DD/YYYY');
+    delete element.dateUpdated;
+});
+
+// excel ./products.json products;
+
+console.log(products[1]);
+
+
+
+
