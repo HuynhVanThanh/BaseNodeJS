@@ -417,3 +417,14 @@ week2/node_modules/supports-color/index.js
 week2/node_modules/supports-color/license
 week2/node_modules/supports-color/package.json
 week2/node_modules/supports-color/readme.md
+week2/node_modules/json/README.md
+week2/node_modules/.bin/json
+week2/node_modules/.bin/json.cmd
+week2/node_modules/json/.gitmodules
+week2/node_modules/json/.jshintrc
+week2/node_modules/json/.npmignore
+week2/node_modules/json/CHANGES.md
+week2/node_modules/json/LICENSE.txt
+week2/node_modules/json/package.json
+week2/node_modules/json/lib/json.js
+week2/node_modules/json/man/man1/json.1
