@@ -27,18 +27,21 @@ const students = [
     },
   ];
 
-count_male = students.reduce((accumulator,currentValue) => {
-  if (currentValue.gender == 'male') accumulator++;
-  return accumulator;
-},0);
+// var count = students.reduce((count,currentValue) => {
+//   if (currentValue.gender == 'male') count.male++;
+//   else count.female++;
+//   return count;
+// },{male:0,female:0});
 
-count_female = students.reduce((accumulator,currentValue) => {
-  if (currentValue.gender == 'female') accumulator++;
-  return accumulator;
-},0);
+var count = students.reduce(function (allgender, curent) { 
+  if (curent.gender in allgender) {
+    allgender[curent.gender]++;
+  }
+  else allgender[curent.gender] = 1;
+  return allgender;
+}, {});
 
- console.log('so hoc sinh nam la: ' + count_male);
- console.log('so hoc sinh nu la: ' + count_female);
+console.log(count);
 
 const new_stu = students.map(students => students.name);
 console.log (new_stu);
