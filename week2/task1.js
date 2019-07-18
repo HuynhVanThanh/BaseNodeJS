@@ -10,6 +10,6 @@ const someday = new Date(yob);
 age = moment(someday).fromNow();
 
 const chalk = require('chalk');
-console.log('Thank you. Hello ' + '\x1b[31m' + name + '\x1b[0m' 
-            + ', so you are ' + '\x1b[32m' + age + '\x1b[0m' 
-            + ' year old and from ' + '\x1b[33m' + homeTown + '\x1b[0m');
+console.log(`Thank you. Hello ${chalk.green(name)}, 
+            so you are ${chalk.blue(age)} year old
+            and you from ${chalk.red(homeTown)}`);
