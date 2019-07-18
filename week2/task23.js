@@ -23,9 +23,11 @@ products.forEach(element => {
     element.dateUpdated = new Date(element.dateUpdated);
 });
 
-const moment = require('moment');
-moment.updateLocale('vi', {relativeTime : Object});
 var numeral = require('numeral');
+const moment = require('moment');
+moment.updateLocale('vi', {
+  calendar : Object
+});
 
 products.forEach(element => {
     var id = element.id;
