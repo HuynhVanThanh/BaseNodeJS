@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ title }}</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+    
+{{{body}}}
+</body>
+</html>
+{{!-- index.hbs --}}
+<h1>{{ message }}</h1>
+
+
+<table style="width:80%" align="center">
+  <caption> Products list </caption>
+    {{#each products}} 
+    <tr>
+    <th><img  src="{{thumbnail}}" /></th>
+    </tr>
+    <tr>
+    <th>{{name}} - {{salePrice}}</th>
+    </tr>
+    <tr>
+    <th>{{@index}}</th>
+    </tr>
+  {{/each}}    
+</table>
+
