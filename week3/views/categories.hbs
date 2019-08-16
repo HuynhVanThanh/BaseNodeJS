@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ title }}</title>
+<style>
+
+</style>
+</head>
+<body>
+    
+{{{body}}}
+</body>
+</html>
+{{!-- index.hbs --}}
+<h1>{{ message }}</h1>
+
+
+<table border="1" style="border-collapse: collapse; ">
+    <tr>
+<th >id</th>
+<th > name</th>
+<th >description</th>
+</tr>
+    {{#each categories}} 
+<tr>
+<td >{{_id}}</td>
+<td >{{name}}</td>
+<td >{{description}}</td>
+</tr>
+  {{/each}} 
+</table>
+   

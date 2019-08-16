@@ -3,13 +3,17 @@
 <head>
 <title>{{ title }}</title>
 <style>
-table, th, td {
+.list {
+  border-collapse: collapse;
+  width: 60%;  
+}
+.pro {
   border: 1px solid black;
   border-collapse: collapse;
-}
-th, td {
   padding: 5px;
+  float: left;
   text-align: left;
+  width: 32%;
 }
 </style>
 </head>
@@ -21,19 +25,13 @@ th, td {
 {{!-- index.hbs --}}
 <h1>{{ message }}</h1>
 
-
-<table style="width:80%" align="center">
-  <caption> Products list </caption>
+  <div class="list">    
     {{#each products}} 
-    <tr>
-    <th><img  src="{{thumbnail}}" /></th>
-    </tr>
-    <tr>
-    <th>{{name}} - {{salePrice}}</th>
-    </tr>
-    <tr>
-    <th>{{@index}}</th>
-    </tr>
-  {{/each}}    
-</table>
-
+    <div class="pro">
+    <div><img  src="{{thumbnail}}" /></div>
+    <div>{{name}} - {{salePrice}}</div>
+    <div>{{@index}}</div>  
+    </div>
+  {{/each}} 
+  </div>
+   
