@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ title }}</title>
+<style>
+
+</style>
+</head>
+<body>
+    
+{{{body}}}
+</body>
+</html>
+{{!-- index.hbs --}}
+<h1>{{ message }}</h1>
+
+<table border="1" style="border-collapse: collapse;">
+    <tr>
+<th >id</th>
+<th >last name</th>
+<th >first name</th>
+<th >gender</th>
+</tr>
+    {{#each users}} 
+<tr>
+<td >{{_id}}</td>
+<td >{{lastName}}</td>
+<td >{{firstName}}</td>
+<td >{{gender}}</td>
+</tr>
+  {{/each}} 
+</table>
+   
