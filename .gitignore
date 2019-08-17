@@ -1,8 +1,8 @@
-# node_modules/
-week2/node_modules/
-week3/node_modules/
+node_modules/
+public/
 
-week2es/moment/src/lib/locale/formats.js
-week2/n_dules/neo-async/omitLimit.js
-#
-week3/howtocode.md
+bin
+views
+data
+routes
+howtocode.md
